@@ -16,6 +16,12 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+// Route test simple
+app.get('/', (req, res) => {
+  res.send('API Express fonctionne correctement 🚀');
+});
+
+
 app.post('/api/contact', async (req, res) => {
   try {
     const { nom, email, telephone, sujet, message } = req.body;
